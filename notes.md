@@ -1,10 +1,4 @@
 # Inici fitxer version.php
-# Actualitza 
-sudo php admin/cli/upgrade.php
-# Esborra cache
-sudo php admin/cli/purge_caches.php
-# Desinstal·la el plugin
-sudo php admin/cli/uninstall_plugins.php --plugins=local_message --run
 
 # Extensió per accedir a la base de dades
 SQLTools MySQL/MariaDB/TiDB

@@ -21,6 +21,7 @@ $templatecontext = (object) [
     'bulkediturl' => new moodle_url('/local/message/bulkedit.php'),
 ];
 
+// mustache template
 echo $OUTPUT->render_from_template('local_message/manage', $templatecontext);
 
 echo $OUTPUT->footer();
