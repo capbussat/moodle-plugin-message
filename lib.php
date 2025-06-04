@@ -17,9 +17,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+// this is a Moodle hook _before_footer executes in any page
 function  local_message_before_footer(){
    global $DB, $USER;
-
 
    $sql = "SELECT * FROM {local_message} lm
         WHERE lm.id NOT IN (
@@ -30,6 +30,7 @@ function  local_message_before_footer(){
    $params = array('userid' => $USER->id);
    $messages = $DB->get_records_sql($sql, $params);
    
+   // all previous executes on every page!
    if (empty($messages)) {   
       return;// No messages to display.
    }
